@@ -11,61 +11,33 @@ class MyFirstApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SingleChildScrollView(
-            child: Column(
+        body: Column(
           children: [
-            Container(
-              color: Colors.red,
-              height: 100.0,
-              width: double.infinity,
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: double.infinity,
+                height: 600.0,
+                color: Colors.purple,
+              ),
             ),
-            Container(
-              color: Colors.green,
-              height: 100.0,
-              width: double.infinity,
+            Expanded(
+              flex: 3,
+              child: Container(
+                width: double.infinity,
+                height: 300.0,
+                color: Colors.green,
+              ),
             ),
-            Container(
-              color: Colors.red,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.green,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.red,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.green,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.red,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.green,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.red,
-              height: 100.0,
-              width: double.infinity,
-            ),
-            Container(
-              color: Colors.green,
-              height: 100.0,
-              width: double.infinity,
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                height: 300.0,
+                color: Colors.blue,
+              ),
             ),
           ],
-        )),
+        ),
       ),
     );
   }
