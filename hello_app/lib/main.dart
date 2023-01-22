@@ -11,25 +11,61 @@ class MyFirstApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Row(
+        body: SingleChildScrollView(
+            child: Column(
           children: [
             Container(
               color: Colors.red,
-              height: 200.0,
-              width: 100.0,
+              height: 100.0,
+              width: double.infinity,
             ),
             Container(
-              color: Colors.blue,
-              height: 200.0,
-              width: 100.0,
+              color: Colors.green,
+              height: 100.0,
+              width: double.infinity,
             ),
             Container(
-              color: Colors.purple,
-              height: 200.0,
-              width: 100.0,
+              color: Colors.red,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.green,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.red,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.green,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.red,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.green,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.red,
+              height: 100.0,
+              width: double.infinity,
+            ),
+            Container(
+              color: Colors.green,
+              height: 100.0,
+              width: double.infinity,
             ),
           ],
-        ),
+        )),
       ),
     );
   }
