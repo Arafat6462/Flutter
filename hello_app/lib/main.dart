@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_app/widgets/list_item.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,16 +12,39 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          leading: const Icon(Icons.search),
-          title: const Text('Title'),
-          actions: const [Icon(Icons.alarm), Icon(Icons.notification_add)],
+          title: const Text('Material App Bar'),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          child: ListView(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 100.0,
+                  color: Colors.redAccent,
+                ),
+              ),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+              ListItem(),
+            ],
+          ),
         ),
       ),
     );
