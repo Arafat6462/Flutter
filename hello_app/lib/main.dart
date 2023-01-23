@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_app/widgets/list_item.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,35 +13,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Material App Bar'),
         ),
-        body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          child: ListView(
+        body: Center(
+          child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 100.0,
-                  color: Colors.redAccent,
-                ),
+              Image.asset(
+                "assets/images/flow.jpg",
+                width: 350.0,
               ),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
-              ListItem(),
+              Image.asset(
+                "assets/images/pic.png",
+                width: 350.0,
+              ),
             ],
           ),
         ),
