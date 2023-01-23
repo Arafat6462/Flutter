@@ -1,45 +1,33 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyFirstApp());
-}
+void main() => runApp(const MyApp());
 
-class MyFirstApp extends StatelessWidget {
-  const MyFirstApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: double.infinity,
-                height: 600.0,
-                color: Colors.purple,
-              ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 300.0,
-                  color: Colors.green,
+        body: Center(
+          child: Container(
+            // child: ElevatedButton(
+            child: SizedBox(
+              width: 120.0,
+              height: 40.0,
+              child: ElevatedButton(
+                onPressed: () {
+                  print("Button clicked.");
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.search),
+                    Text("Click me"),
+                  ],
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                height: 300.0,
-                color: Colors.blue,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
