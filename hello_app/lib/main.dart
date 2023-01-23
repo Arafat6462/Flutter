@@ -23,10 +23,13 @@ class MyFirstApp extends StatelessWidget {
             ),
             Expanded(
               flex: 3,
-              child: Container(
-                width: double.infinity,
-                height: 300.0,
-                color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 300.0,
+                  color: Colors.green,
+                ),
               ),
             ),
             Expanded(
