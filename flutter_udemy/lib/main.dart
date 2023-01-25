@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-  String api = "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";
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,15 +8,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: Text("First App"),
         ),
-        body: const Center(
-          child: Text('Hello World..!!'),
-        ),
+        body: Text("Hello world"),
       ),
     );
   }
 }
+
+// 2-> 015
