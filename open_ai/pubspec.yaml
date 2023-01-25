@@ -31,7 +31,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+  flutter_bloc: ^8.0.0
+  equatable: ^2.0.3
+  http: ^0.13.5
+  get_it: ^7.2.0
+  flutter_staggered_grid_view: ^0.6.1
+  cached_network_image: 3.2.3
+  share_plus: ^6.3.0
+  shimmer: ^2.0.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
