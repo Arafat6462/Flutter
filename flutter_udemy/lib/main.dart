@@ -10,12 +10,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("First App"),
+          title: const Text("First App"),
         ),
-        body: Text("Hello world"),
+        body: Column(
+          children: [
+            const Text("The Question!"),
+            ElevatedButton(
+              onPressed: null,
+              child: const Text("Answer 1"),
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: const Text("Answer 2"),
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: const Text("Answer 3"),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-// 2-> 015
+// 2-> 016
