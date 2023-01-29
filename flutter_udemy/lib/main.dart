@@ -5,17 +5,17 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   // const MyApp({super.key});
-  var questionsIndex = 0;
+  var _questionsIndex = 0;
 
-  void answerQuestions() {
+  void _answerQuestions() {
     setState(() {
-      questionsIndex = questionsIndex + 1;
+      _questionsIndex = _questionsIndex + 1;
     });
     print("answer chosen");
   }
@@ -33,17 +33,17 @@ class MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions.elementAt(questionsIndex)),
+            Text(questions.elementAt(_questionsIndex)),
             ElevatedButton(
-              onPressed: answerQuestions,
+              onPressed: _answerQuestions,
               child: const Text("Answer 1"),
             ),
             ElevatedButton(
-              onPressed: answerQuestions,
+              onPressed: _answerQuestions,
               child: const Text("Answer 2"),
             ),
             ElevatedButton(
-              onPressed: answerQuestions,
+              onPressed: _answerQuestions,
               child: const Text("Answer 3"),
             ),
           ],
@@ -53,4 +53,4 @@ class MyAppState extends State<MyApp> {
   }
 }
 
-// 2-> 20
+// 2-> 23
