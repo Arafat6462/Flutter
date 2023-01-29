@@ -4,6 +4,8 @@ import './question.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
@@ -11,8 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // const MyApp({super.key});
-  var _questionsIndex = 0;
+   var _questionsIndex = 0;
 
   void _answerQuestions() {
     setState(() {
@@ -56,4 +57,4 @@ class _MyAppState extends State<MyApp> {
 
 
 
-// 2-> 23
+// 2-> 28
