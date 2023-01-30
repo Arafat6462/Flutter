@@ -4,17 +4,18 @@ import 'package:flutter/src/widgets/placeholder.dart';
 
 class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
+  final String answerText;
 
-  Answer(this.selectHandler);
+  Answer(this.selectHandler, this.answerText);
   // const Answer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 200.0,
       child: ElevatedButton(
         // color: Colors.greenAccent,
-        child: Text("Answer is 1"),
+        child: Text(answerText),
         onPressed: selectHandler,
 
         style: ElevatedButton.styleFrom(

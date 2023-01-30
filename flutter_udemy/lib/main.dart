@@ -46,22 +46,26 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Question(questions.elementAt(_questionsIndex)),
-            ElevatedButton(
-              onPressed: _answerQuestions,
-              child: const Text("Answer 1"),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestions,
-              child: const Text("Answer 2"),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestions,
-              child: const Text("Answer 3"),
-            ),
-            Answer(_answerQuestions),
-            Answer(_answerQuestions),
-            Answer(_answerQuestions),
+            Question(questions[_questionsIndex]['questionText'] as String),
+            // ElevatedButton(
+            //   onPressed: _answerQuestions,
+            //   child: const Text("Answer 1"),
+            // ),
+            // ElevatedButton(
+            //   onPressed: _answerQuestions,
+            //   child: const Text("Answer 2"),
+            // ),
+            // ElevatedButton(
+            //   onPressed: _answerQuestions,
+            //   child: const Text("Answer 3"),
+            // ),
+            // Answer(_answerQuestions),
+            // Answer(_answerQuestions),
+            // Answer(_answerQuestions),
+            ...(questions[_questionsIndex]['answers'] as List<String>)
+                .map((answer) {
+              return Answer(_answerQuestions, answer);
+            }).toList()
           ],
         ),
       ),
@@ -71,4 +75,4 @@ class _MyAppState extends State<MyApp> {
 
 
 
-// 2-> 28
+// 2-> 31
