@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,7 +28,14 @@ class MyHomePage extends StatelessWidget {
         body: Column(
           children: [
             Card(
-              child: Text('CHART'),
+              child: Container(
+                width: 100,
+                height: 100,
+                child: Text('CHART'),
+              ),
+              elevation: 5,
+              shadowColor: Color.fromARGB(255, 255, 64, 230),
+              color: Color.fromARGB(255, 240, 224, 214),
             ),
             Card(
               child: Text('LISt OF TX'),
@@ -38,3 +44,4 @@ class MyHomePage extends StatelessWidget {
         ));
   }
 }
+//04 -> 004
