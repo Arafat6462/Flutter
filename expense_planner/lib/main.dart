@@ -55,16 +55,13 @@ class MyHomePage extends StatelessWidget {
                 color: Color.fromARGB(255, 240, 224, 214),
               ),
             ),
-            Container(
-              width: 70,
-              height: 50,
-              child: Card(
-                child: Text('CHART'),
-                elevation: 5,
-                shadowColor: Color.fromARGB(255, 255, 64, 230),
-                color: Color.fromARGB(255, 214, 240, 216),
-              ),
-            ),
+            Column(
+              children: transaction.map((tx) {
+                return Card(
+                  child: Text(tx.title),
+                );
+              }).toList(),
+            )
           ],
         ));
   }
