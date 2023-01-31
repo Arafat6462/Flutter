@@ -26,20 +26,29 @@ class MyHomePage extends StatelessWidget {
           title: Text("Flutter App 2"),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Card(
-              child: Container(
-                width: 100,
-                height: 100,
+            Container(
+              width: double.infinity,
+              height: 100,
+              child: Card(
                 child: Text('CHART'),
+                elevation: 5,
+                shadowColor: Color.fromARGB(255, 255, 64, 230),
+                color: Color.fromARGB(255, 240, 224, 214),
               ),
-              elevation: 5,
-              shadowColor: Color.fromARGB(255, 255, 64, 230),
-              color: Color.fromARGB(255, 240, 224, 214),
             ),
-            Card(
-              child: Text('LISt OF TX'),
-            )
+            Container(
+              width: 70,
+              height: 50,
+              child: Card(
+                child: Text('CHART'),
+                elevation: 5,
+                shadowColor: Color.fromARGB(255, 255, 64, 230),
+                color: Color.fromARGB(255, 214, 240, 216),
+              ),
+            ),
           ],
         ));
   }
