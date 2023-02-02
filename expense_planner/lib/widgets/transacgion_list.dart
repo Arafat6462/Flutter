@@ -4,13 +4,14 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 
 class TransactionList extends StatelessWidget {
-  final List<Transaction> transaction;
-  TransactionList(this.transaction);
+  
+  final List<Transaction> transactions;
+  TransactionList(this.transactions);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: transaction.map((tx) {
+      children: transactions.map((tx) {
         return Card(
             child: Row(
           children: [
