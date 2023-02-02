@@ -31,8 +31,9 @@ class NewTransaction extends StatelessWidget {
                 onPressed: () {
                   // print(titleInput);
                   // print(amountInput);
-                  print(titleController.text);
-                  print(amountController.text);
+                  // print(titleController.text);
+                  // print(amountController.text);
+                  
                 },
                 child: Text("Add Transaction"))
           ],
