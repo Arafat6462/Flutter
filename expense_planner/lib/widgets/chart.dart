@@ -1,4 +1,5 @@
 import 'package:expense_planner/models/transaction.dart';
+import 'package:expense_planner/widgets/chart_bar.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
@@ -30,7 +31,13 @@ class Chart extends StatelessWidget {
       };
     });
   }
+
   // const Chart({super.key});
+  double get totalSpending {
+    return groupTransactionValues.fold(0.0, (sum, item) {
+      return sum + (item['amount'] as double);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +47,12 @@ class Chart extends StatelessWidget {
       margin: EdgeInsets.all(20),
       child: Row(
         children: groupTransactionValues.map((data) {
-          return Text('${data['day']} : ${data['amount']}');
+          return ChartBar(
+              data['day'].toString(),
+              (data['amount'] as double),
+              totalSpending == 0.0
+                  ? 0.0
+                  : (data['amount'] as double) / totalSpending);
         }).toList(),
       ),
     );
