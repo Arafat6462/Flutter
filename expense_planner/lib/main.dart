@@ -20,6 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.cyan)
             .copyWith(secondary: Colors.amber),
+        fontFamily: 'Quicksand',
+        appBarTheme: AppBarTheme(
+            textTheme: ThemeData.light().textTheme.copyWith(
+                titleLarge: TextStyle(fontFamily: 'OpenSans', fontSize: 14))),
       ),
       home: MyHomePage(),
     );
@@ -93,7 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Color.fromARGB(255, 244, 155, 54),
-        title: Text("Personal Expenses"),
+        title: Text(
+          "Personal Expenses",
+          style: TextStyle(fontFamily: 'OpenSans'),
+        ),
         actions: [
           IconButton(
             onPressed: () {
