@@ -33,6 +33,8 @@ class TransactionList extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Card(
                   elevation: 5,
+                  color: Color.fromARGB(255, 198, 223, 243),
+                  shadowColor: Color.fromARGB(255, 11, 215, 241),
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
                   child: ListTile(
                     leading: CircleAvatar(
