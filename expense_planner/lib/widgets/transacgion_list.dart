@@ -13,23 +13,25 @@ class TransactionList extends StatelessWidget {
     return Container(
       height: 600,
       child: transactions.isEmpty
-          ? Column(
-              children: [
-                Text(
-                  "No Transactions added yet!",
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                SizedBox(
-                  height: 100,
-                ), // for spacing between two items.
-                Container(
-                    height: 200,
-                    child: Image.asset(
-                      "assets/images/waiting.png",
-                      fit: BoxFit.cover,
-                    ))
-              ],
-            )
+          ? LayoutBuilder(builder: (ctx, constrains) {
+              return Column(
+                children: [
+                  Text(
+                    "No Transactions added yet!",
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ), // for spacing between two items.
+                  Container(
+                      height: constrains.maxHeight * .4,
+                      child: Image.asset(
+                        "assets/images/waiting.png",
+                        fit: BoxFit.cover,
+                      ))
+                ],
+              );
+            })
           : ListView.builder(
               itemBuilder: (context, index) {
                 return Card(
