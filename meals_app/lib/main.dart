@@ -12,7 +12,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DeliMeals',
-      theme: ThemeData(primarySwatch: Colors.blueGrey),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+            .copyWith(secondary: Colors.amber),
+        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
+        fontFamily: 'Railway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              bodyLarge: TextStyle(
+                color: Color.fromRGBO(20, 51, 51, 1),
+              ),
+              titleMedium: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'RobotoCondesned',
+                  fontWeight: FontWeight.bold),
+            ),
+      ),
       home: CategoriesScreen(),
     );
   }
