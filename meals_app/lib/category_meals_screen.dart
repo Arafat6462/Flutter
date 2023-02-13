@@ -4,13 +4,18 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
-  final String categoryId;
-  final String categoryTitle;
+  // final String categoryId;
+  // final String categoryTitle;
 
-  CategoryMealsScreen(this.categoryId, this.categoryTitle);
+  // CategoryMealsScreen(this.categoryId, this.categoryTitle);
 
   @override
   Widget build(BuildContext context) {
+    final routesArgs =
+        ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+    final categoryId = routesArgs['id'];
+    final categoryTitle = routesArgs['title'];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("${categoryTitle} ${categoryId}"),
