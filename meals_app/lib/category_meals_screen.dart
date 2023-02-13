@@ -4,16 +4,19 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
-  const CategoryMealsScreen({super.key});
+  final String categoryId;
+  final String categoryTitle;
+
+  CategoryMealsScreen(this.categoryId, this.categoryTitle);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("The recipies"),
+        title: Text("${categoryTitle} ${categoryId}"),
       ),
       body: Center(
-        child: Text("The Recipies for the Categories"),
+        child: Text("The Recipies for the Categorie ${categoryTitle}"),
       ),
     );
   }
