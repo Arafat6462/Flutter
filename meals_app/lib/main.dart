@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/screens/categories_screen.dart';
 import 'package:meals_app/screens/category_meals_screen.dart';
 import 'package:meals_app/screens/meal_detail_screen.dart';
- 
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,27 +36,18 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (context) => MealDetailScreen(),
       },
+
+      // if route not register then go to this page
+      // onGenerateRoute: (settings) {
+      //   return MaterialPageRoute(
+      //     builder: (context) => CategoriesScreen(),
+      //   );
+      // },
+
+// if no screen register then lastly go to this page. usally error page.
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => CategoriesScreen());
+      },
     );
   }
 }
-
-// class MyHome extends StatefulWidget {
-//   const MyHome({super.key});
-
-//   @override
-//   State<MyHome> createState() => _MyHomeState();
-// }
-
-// class _MyHomeState extends State<MyHome> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('DeliMeals..'),
-//       ),
-//       body: Center(
-//         child: Text('Navigation Time!'),
-//       ),
-//     );
-//   }
-// }
