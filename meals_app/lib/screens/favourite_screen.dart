@@ -10,12 +10,16 @@ class FavoritesScreen extends StatelessWidget {
 
   FavoritesScreen(this.favoriteMeals);
 
-  get displayedMeals => null;
+  // get displayedMeals => null;
 
   @override
   Widget build(BuildContext context) {
-    if (!favoriteMeals.isEmpty) {
-      ListView.builder(
+    if (favoriteMeals.isEmpty) {
+      return Center(
+        child: Text('You have no favorites yet - start adding some!'),
+      );
+    } else {
+      return ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
             id: favoriteMeals[index].id,
@@ -29,8 +33,5 @@ class FavoritesScreen extends StatelessWidget {
         itemCount: favoriteMeals.length,
       );
     }
-    return Center(
-      child: Text("You have no Favourite yet."),
-    );
   }
 }
