@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:shop_app/screens/products_overview_screen.dart';
 
 void main() {
-  runApp(MyApp()); 
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MyShop',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+            .copyWith(secondary: Colors.deepOrange),
+        fontFamily: 'Lato',
+      ),
       home: ProductsOverviewScreen(),
     );
   }
 }
-
- 
